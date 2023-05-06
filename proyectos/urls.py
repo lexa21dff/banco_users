@@ -11,12 +11,16 @@ from proyectos.views.perfil import *
 from proyectos.views.tipo_revision import *
 from proyectos.views.categoria import *
 from proyectos.views.proyecto import *
-from proyectos.views.equipo_trabajo import *
+
 from proyectos.views.entrega import *
 from proyectos.views.documento import *
 from proyectos.views.user import *
+from proyectos.views.grupo import *
+from proyectos.views.inscrito import *
 router = routers.DefaultRouter()
 
+router.register(r'inscrito', InscritoViewSet)
+router.register(r'grupo', GrupoViewSet)
 router.register(r'rol', RolViewSet)
 router.register(r'user', UserViewSet)
 router.register(r'regional', RegionalViewSet)
@@ -27,7 +31,7 @@ router.register(r'perfil', PerfilViewSet)
 router.register(r'tipo_revision', Tipo_revisionViewSet)
 router.register(r'categoria', CategoriaViewSet)
 router.register(r'proyecto', ProyectoViewSet)
-router.register(r'equipo_trabajo', Equipo_trabajoViewSet)
+
 router.register(r'entrega', EntregaViewSet)
 router.register(r'documento', DocumentoViewSet)
 

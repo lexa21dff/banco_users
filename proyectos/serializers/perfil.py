@@ -6,4 +6,5 @@ class PerfilSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Perfil
         fields = [ 'url','id','documento', 'rol', 'usuario']
+       
 

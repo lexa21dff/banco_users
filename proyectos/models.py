@@ -136,7 +136,7 @@ class Perfil(models.Model):
     editado         = models.DateTimeField(auto_now = True)
     
     def __str__(self):
-        return self.usuario.username + " " + self.documento
+        return self.usuario.username
 
     
 class Tipo_Revision(models.Model):
@@ -183,7 +183,7 @@ class Inscrito (models.Model):
     proyecto        = models.IntegerField(null= True, blank= True) # consulta el id del Proyecto
     
     def __str__(self):
-        return self.nombre_grupo
+        return str(self.nombre_grupo)
 
 
 class Entrega (models.Model):

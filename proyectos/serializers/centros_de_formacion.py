@@ -5,4 +5,4 @@ class Centros_de_formacionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Centros_de_formacion
         fields = ['url', 'id','nombre', 'regional']
-
+        depth= 2

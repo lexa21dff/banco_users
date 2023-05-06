@@ -5,4 +5,5 @@ class RegionalSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Regional
         fields = ['url', 'id','nombre']
+        
 
