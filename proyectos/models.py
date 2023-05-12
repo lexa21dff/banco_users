@@ -183,7 +183,7 @@ class Inscrito (models.Model):
     proyecto        = models.IntegerField(null= True, blank= True) # consulta el id del Proyecto
     
     def __str__(self):
-        return str(self.nombre_grupo)
+        return str(self.perfil)
 
 
 class Entrega (models.Model):

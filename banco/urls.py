@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from proyectos.views.login import UserLoginAPIView
 from proyectos.views.signup import UserSignUpAPIView
+from proyectos.views.lista_entrega import entregas_por_usuario_proyecto
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('proyectos.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/login/', UserLoginAPIView.as_view(), name='login'),
     path('api/signup/', UserSignUpAPIView.as_view(), name='login'),
+    path('api/entregas/<int:user_id>/<int:proyecto_id>/', entregas_por_usuario_proyecto, name='entregas_por_usuario_proyecto'),
 ]
